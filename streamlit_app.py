@@ -28,4 +28,5 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_c
 # convert json response to dataframe
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #display dataframe
+streamlit.write('The user has entered ' + fruit_choice')
 streamlit.dataframe(fruityvice_normalized)
